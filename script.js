@@ -1,14 +1,13 @@
 const apps = {
-    "calculator": "/apps/calculator/index.html",
-    "App2": "/apps/App2/index.html"
+    "App1": "/apps/App1/index.html",
+    "calculator": "/apps/calculator/index.html"
     // नए ऐप्स यहाँ जोड़ें
 };
 
-const path = window.location.pathname.split('/').pop();
-const appName = path || Object.keys(apps)[0];
+const path = window.location.pathname.split('/').filter(p => p)[0] || Object.keys(apps)[0];
 
-if (apps[appName]) {
-    window.location.replace(apps[appName]); // रीडायरेक्ट
+if (apps[path]) {
+    window.location.replace(apps[path]); // सही रीडायरेक्ट
 } else {
     document.body.innerHTML = '<p style="color: red; text-align: center;">App not found!</p>';
 }
