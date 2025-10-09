@@ -1,5 +1,5 @@
 const apps = {
-    "App1": "/apps/App1/index.html",
+    "App1": "/apps/calculator/index.html",
     "calculator": "/apps/calculator/index.html"
     // नए ऐप्स यहाँ जोड़ें
 };
